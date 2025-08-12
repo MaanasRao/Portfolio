@@ -27,8 +27,25 @@ const Contact = () => {
     });
   };
 
+  const validateEmail = (email) => {
+    // Simple email regex check
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Field validation
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    if (!validateEmail(form.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -125,7 +142,7 @@ const Contact = () => {
           variants={slideIn("right", "tween", 0.2, 1)}
           className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px] flex justify-center items-center'
         >
-          <LottieEarth /> 
+          <LottieEarth />
         </motion.div>
       </div>
 
