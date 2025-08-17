@@ -49,17 +49,17 @@ const Hero = () => {
       />
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-[1200px] px-6 sm:px-10 flex flex-col-reverse lg:flex-row items-center justify-center gap-12 lg:gap-20 overflow-x-hidden">
+      <div className="relative z-10 max-w-[1400px] w-full px-10 flex flex-col-reverse lg:flex-row items-center justify-center gap-20">
         {/* Text Section */}
         <div className="flex-1 text-center lg:text-left">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6 leading-tight">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-transparent animate-pulse">
               Maanas
             </span>
           </h1>
 
-          <p className="text-lg sm:text-2xl lg:text-3xl text-white-100 mb-6">
+          <p className="text-xl sm:text-3xl text-white-100 mb-6">
             I'm into{" "}
             <span className="text-cyan-400 font-semibold">
               <Typewriter
@@ -88,8 +88,8 @@ const Hero = () => {
         </div>
 
         {/* Lottie Animation Section */}
-        <div className="flex-1 flex justify-center items-center w-full overflow-hidden">
-          <div className="w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[600px] drop-shadow-[0_0_60px_rgba(145,94,255,0.3)]">
+        <div className="flex-1 flex justify-center items-center">
+          <div className="w-full max-w-[600px] drop-shadow-[0_0_60px_rgba(145,94,255,0.3)]">
             <Lottie animationData={animationData} loop autoplay />
           </div>
         </div>
