@@ -10,18 +10,22 @@ const Hero = () => {
     await loadSlim(main);
   };
 
-  // Embedded CSS for cursor alignment
+  // Mobile cursor alignment fix
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
+      .Typewriter {
+        display: inline-flex;
+        align-items: center;
+      }
       .Typewriter__cursor {
-        display: inline-block !important;
-        vertical-align: middle !important;
+        margin-left: 2px;
+        font-weight: bold;
       }
       @media (max-width: 768px) {
-        .Typewriter__wrapper {
-          display: inline-block;
-          vertical-align: middle;
+        .Typewriter__cursor {
+          height: 1.2em;
+          vertical-align: text-bottom;
         }
       }
     `;
@@ -31,7 +35,7 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen bg-gradient-to-b from-primary via-tertiary to-black-100 flex items-center justify-center overflow-hidden">
-      {/* Particle Background */}
+      {/* Particle Background (unchanged) */}
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -67,9 +71,8 @@ const Hero = () => {
         className="absolute top-0 left-0 w-full h-full z-0"
       />
 
-      {/* Main Content */}
+      {/* Main Content with fixed cursor alignment */}
       <div className="relative z-10 max-w-[1400px] w-full px-10 flex flex-col-reverse lg:flex-row items-center justify-center gap-20">
-        {/* Text Section */}
         <div className="flex-1 text-center lg:text-left">
           <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6 leading-tight">
             Hi, I'm{" "}
@@ -78,9 +81,9 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-xl sm:text-3xl text-white-100 mb-6 flex items-center justify-center lg:justify-start">
-            I'm into{" "}
-            <span className="text-cyan-400 font-semibold ml-2 inline-flex items-center min-h-[1.5em]">
+          <div className="text-xl sm:text-3xl text-white-100 mb-6 flex items-center justify-center lg:justify-start">
+            <span>I'm into </span>
+            <span className="text-cyan-400 font-semibold ml-2 h-[1.5em] flex items-center">
               <Typewriter
                 words={[
                   "Web Development",
@@ -91,15 +94,14 @@ const Hero = () => {
                 loop
                 cursor
                 cursorStyle="|"
+                cursorColor="#00FFFF"
                 typeSpeed={80}
                 deleteSpeed={50}
                 delaySpeed={2000}
-                style={{ display: 'inline-block' }}
               />
             </span>
-          </p>
+          </div>
 
-          {/* Resume Button */}
           <a href="/maanas_resume.pdf" download>
             <button className="mt-4 px-8 py-4 text-lg bg-[#915EFF] text-white font-semibold rounded-xl hover:bg-purple-700 transition">
               Download Resume
@@ -107,7 +109,6 @@ const Hero = () => {
           </a>
         </div>
 
-        {/* Lottie Animation Section */}
         <div className="flex-1 flex justify-center items-center">
           <div className="w-full max-w-[600px] drop-shadow-[0_0_60px_rgba(145,94,255,0.3)]">
             <Lottie animationData={animationData} loop autoplay />
@@ -115,7 +116,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
       <a href="#about" className="absolute bottom-10 z-10">
         <div className="w-[35px] h-[64px] border-4 border-secondary rounded-3xl flex justify-center items-start p-2 mx-auto">
           <div className="w-3 h-3 rounded-full bg-secondary animate-bounce" />
