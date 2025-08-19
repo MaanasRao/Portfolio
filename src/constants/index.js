@@ -206,6 +206,7 @@ const projects = [
     ],
     image: healthrisk, // replace with actual image import or path
     source_code_link: "https://github.com/MaanasRao/Health-Risk-Predictor",
+    live_demo_link: "https://health-risk-predictor.onrender.com",
   },
   {
     name: "Stock Analyzer",
@@ -227,6 +228,7 @@ const projects = [
     ],
     image: stockanalyzer, // replace with actual image import or path
     source_code_link: "https://github.com/MaanasRao/stock-analyzer",
+    live_demo_link: "https://stock-analyzer-49dn.onrender.com",
   },
   {
     name: "Football Predictor",
