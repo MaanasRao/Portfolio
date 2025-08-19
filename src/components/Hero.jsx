@@ -3,12 +3,31 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "@tsparticles/slim";
 import { Typewriter } from "react-simple-typewriter";
 import Lottie from "lottie-react";
-import animationData from "../assets/Animation - 1751961156655.json"; // Ensure this path is correct
+import animationData from "../assets/Animation - 1751961156655.json";
 
 const Hero = () => {
   const particlesInit = async (main) => {
     await loadSlim(main);
   };
+
+  // Embedded CSS for cursor alignment
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .Typewriter__cursor {
+        display: inline-block !important;
+        vertical-align: middle !important;
+      }
+      @media (max-width: 768px) {
+        .Typewriter__wrapper {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
 
   return (
     <section className="relative w-full h-screen bg-gradient-to-b from-primary via-tertiary to-black-100 flex items-center justify-center overflow-hidden">
@@ -59,9 +78,9 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-xl sm:text-3xl text-white-100 mb-6">
+          <p className="text-xl sm:text-3xl text-white-100 mb-6 flex items-center justify-center lg:justify-start">
             I'm into{" "}
-            <span className="text-cyan-400 font-semibold">
+            <span className="text-cyan-400 font-semibold ml-2 inline-flex items-center min-h-[1.5em]">
               <Typewriter
                 words={[
                   "Web Development",
@@ -75,6 +94,7 @@ const Hero = () => {
                 typeSpeed={80}
                 deleteSpeed={50}
                 delaySpeed={2000}
+                style={{ display: 'inline-block' }}
               />
             </span>
           </p>
