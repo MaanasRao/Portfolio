@@ -70,7 +70,7 @@ const Hero = () => {
                   "Data Analysis",
                   "Full Stack Development",
                   "Data Science",
-                  "Sports Analysis"
+                  "Sports Analysis",
                   "Business Analysis",
                 ]}
                 loop
