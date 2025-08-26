@@ -63,7 +63,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl sm:text-3xl text-white-100 mb-6">
-            I'm into{" "}
+            I’m passionate about{" "}
             <span className="text-cyan-400 font-semibold">
               <Typewriter
                 words={[
