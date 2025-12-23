@@ -204,7 +204,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: healthrisk, // replace with actual image import or path
+    image: healthrisk, 
     source_code_link: "https://github.com/MaanasRao/Health-Risk-Predictor",
     live_demo_link: "https://health-risk-predictor.onrender.com",
   },
@@ -226,7 +226,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: stockanalyzer, // replace with actual image import or path
+    image: stockanalyzer, 
     source_code_link: "https://github.com/MaanasRao/stock-analyzer",
     live_demo_link: "https://stock-analyzer-49dn.onrender.com",
   },
@@ -248,8 +248,47 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: footballpredictor, // replace with actual image import or path
+    image: footballpredictor, 
     source_code_link: "https://github.com/Saahil-Gupta/Football-Predictor-V1",
+  },
+
+  {
+  name: "Mac-Find",
+    description:
+      "A dedicated lost-and-found web application for campus students to post and claim lost items. Features a modern UI and real-time updates.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "react", color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+    ],
+    image: footballpredictor, // 
+    source_code_link: "https://github.com/MaanasRao/MacFind", 
+    live_demo_link: "https://mac-find-psi.vercel.app/",
+  },
+  {
+    name: "Liveability",
+    description:
+      "An urban analysis tool that evaluates street-level quality of life metrics using open data. Visualizes safety, convenience, and environment scores.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "streamlit", color: "green-text-gradient" },
+      { name: "openstreetmap", color: "pink-text-gradient" },
+    ],
+    image: footballpredictor, // 
+    source_code_link: "https://github.com/MaanasRao/Liveability",
+  },
+  {
+    name: "Life-Link Live",
+    description:
+      "An offline-first disaster response web app. Simulates a mobile emergency tool to report hazards, find shelters, and sync data locally without internet.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "leaflet", color: "green-text-gradient" },
+    ],
+    image: footballpredictor, //
+    source_code_link: "https://github.com/Saahil-Gupta/MEC--2025",
+    live_demo_link: "https://life-link-live.vercel.app/",
   },
 ];
 

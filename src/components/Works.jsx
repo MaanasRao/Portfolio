@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react"; // 1. Import useState
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -26,7 +26,6 @@ const ProjectCard = ({
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        {/* Project Image */}
         <div className="relative w-full h-[230px]">
           <img
             src={image}
@@ -35,13 +34,11 @@ const ProjectCard = ({
           />
         </div>
 
-        {/* Title + Description */}
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
-        {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
@@ -50,7 +47,6 @@ const ProjectCard = ({
           ))}
         </div>
 
-        {/* Buttons */}
         <div className="mt-5 flex gap-4">
           {live_demo_link && (
             <a
@@ -79,6 +75,14 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  // 2. State to track how many projects are shown
+  const [visibleProjects, setVisibleProjects] = useState(3);
+
+  // 3. Function to load more projects (increments by 3)
+  const showMoreProjects = () => {
+    setVisibleProjects((prev) => prev + 3);
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -99,12 +103,25 @@ const Works = () => {
         </motion.p>
       </div>
 
-      {/* Projects */}
+      {/* Projects Grid */}
       <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
+        {/* 4. Slice the projects array based on state */}
+        {projects.slice(0, visibleProjects).map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
+
+      {/* 5. Load More Button */}
+      {visibleProjects < projects.length && (
+        <div className="w-full flex justify-center mt-10 fade-in">
+          <button
+            onClick={showMoreProjects}
+            className="bg-tertiary hover:bg-white hover:text-tertiary text-white font-bold py-3 px-8 rounded-xl outline-none w-fit shadow-primary transition-all duration-300 ease-in-out"
+          >
+            View More Projects
+          </button>
+        </div>
+      )}
     </>
   );
 };
