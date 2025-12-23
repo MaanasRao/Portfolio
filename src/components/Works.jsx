@@ -1,5 +1,4 @@
-import React, { useState } from "react"; // 1. Import useState
-import Tilt from "react-tilt";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -17,70 +16,82 @@ const ProjectCard = ({
   live_demo_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-
-        <div className="mt-5 flex gap-4">
-          {live_demo_link && (
-            <a
-              href={live_demo_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white py-2 rounded-lg text-center font-medium shadow-md transition"
-            >
-              Live Demo
-            </a>
-          )}
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.1, 0.75)}
+      className="bg-tertiary p-5 rounded-2xl w-full shadow-card hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-white/5"
+    >
+      <div className="relative w-full h-[230px]">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-cover rounded-2xl"
+        />
+        <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
           {source_code_link && (
-            <a
-              href={source_code_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-gray-800 hover:bg-gray-900 text-white py-2 rounded-lg text-center font-medium shadow-md transition"
+            <div
+              onClick={() => window.open(source_code_link, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-2 border border-gray-700 hover:bg-gray-800 transition-colors"
             >
-              GitHub
-            </a>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                alt="github"
+                className="w-1/2 h-1/2 object-contain invert"
+              />
+            </div>
           )}
         </div>
-      </Tilt>
+      </div>
+
+      <div className="mt-5">
+        <h3 className="text-white font-bold text-[24px]">{name}</h3>
+        <p className="mt-2 text-secondary text-[14px] line-clamp-4 leading-relaxed">
+          {description}
+        </p>
+      </div>
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
+            #{tag.name}
+          </p>
+        ))}
+      </div>
+
+      <div className="mt-5 flex gap-4">
+        {live_demo_link && (
+          <a
+            href={live_demo_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white py-2.5 rounded-lg text-center font-medium shadow-md transition-all active:scale-95"
+          >
+            Live Demo
+          </a>
+        )}
+        {source_code_link && (
+          <a
+            href={source_code_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 bg-primary border border-white/10 hover:bg-gray-900 text-white py-2.5 rounded-lg text-center font-medium shadow-md transition-all active:scale-95"
+          >
+            GitHub
+          </a>
+        )}
+      </div>
     </motion.div>
   );
 };
 
 const Works = () => {
-  // 2. State to track how many projects are shown
   const [visibleProjects, setVisibleProjects] = useState(3);
 
-  // 3. Function to load more projects (increments by 3)
   const showMoreProjects = () => {
     setVisibleProjects((prev) => prev + 3);
+  };
+
+  const showLessProjects = () => {
+    setVisibleProjects(3);
   };
 
   return (
@@ -103,27 +114,34 @@ const Works = () => {
         </motion.p>
       </div>
 
-      {/* Projects Grid */}
-      <div className="mt-20 flex flex-wrap gap-7">
-        {/* 4. Slice the projects array based on state */}
+    
+      <div className="mt-20 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.slice(0, visibleProjects).map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
 
-      {/* 5. Load More Button */}
-      {visibleProjects < projects.length && (
-        <div className="w-full flex justify-center mt-10 fade-in">
+
+      <div className="w-full flex justify-center my-20">
+        {visibleProjects < projects.length ? (
           <button
             onClick={showMoreProjects}
-            className="bg-tertiary hover:bg-white hover:text-tertiary text-white font-bold py-3 px-8 rounded-xl outline-none w-fit shadow-primary transition-all duration-300 ease-in-out"
+            className="bg-tertiary hover:bg-white hover:text-tertiary text-white font-bold py-3 px-10 rounded-xl outline-none shadow-primary transition-all duration-300 transform active:scale-95 border border-white/10"
           >
             View More Projects
           </button>
-        </div>
-      )}
+        ) : (
+          <button
+            onClick={showLessProjects}
+            className="bg-tertiary hover:bg-white hover:text-tertiary text-white font-bold py-3 px-10 rounded-xl outline-none shadow-primary transition-all duration-300 transform active:scale-95 border border-white/10"
+          >
+            Show Less
+          </button>
+        )}
+      </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "works");
+
+export default SectionWrapper(Works, "projects");

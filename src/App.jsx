@@ -13,24 +13,18 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-cyberpunk-background">
-        {/* Hero Section */}
-        <div className="bg-cyberpunk-background bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
-        </div>
+      {/* Background */}
+      <StarsCanvas />
 
-        {/* Main Sections */}
+      {/* Content */}
+      <div className="relative z-10 bg-cyberpunk-background">
+        <Navbar />
+        <Hero />
         <About />
         <Experience />
         <Tech />
         <Works />
-
-        {/* Contact + Stars */}
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
+        <Contact />
       </div>
     </BrowserRouter>
   );
