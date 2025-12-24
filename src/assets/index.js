@@ -30,6 +30,9 @@ import luharia from "./company/luharia.png";
 import healthrisk from "./healthrisk.png";
 import stockanalyzer from "./stockanalyzer.png";
 import footballpredictor from "./footballpredictor.png";
+import macfind from "./macfind.jpg";
+import liveability from "./liveability.jpg";
+import lifelink from "./lifelink.jpg";
 
 export {
   logo,
@@ -60,5 +63,8 @@ export {
   healthrisk,
   stockanalyzer,
   footballpredictor,
+  macfind,
+  liveability,
+  lifelink
 
 };

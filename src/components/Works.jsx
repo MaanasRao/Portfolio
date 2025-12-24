@@ -26,20 +26,7 @@ const ProjectCard = ({
           alt={name}
           className="w-full h-full object-cover rounded-2xl"
         />
-        <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-          {source_code_link && (
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-2 border border-gray-700 hover:bg-gray-800 transition-colors"
-            >
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt="github"
-                className="w-1/2 h-1/2 object-contain invert"
-              />
-            </div>
-          )}
-        </div>
+       
       </div>
 
       <div className="mt-5">

@@ -16,6 +16,9 @@ import {
   healthrisk,
   stockanalyzer,
   footballpredictor,
+  macfind,
+  liveability,
+  lifelink,
   threejs,
   developer,
   dataanalytics,
@@ -261,7 +264,7 @@ const projects = [
       { name: "react", color: "green-text-gradient" },
       { name: "tailwind", color: "pink-text-gradient" },
     ],
-    image: footballpredictor, // 
+    image: macfind, // 
     source_code_link: "https://github.com/MaanasRao/MacFind", 
     live_demo_link: "https://mac-find-psi.vercel.app/",
   },
@@ -274,7 +277,7 @@ const projects = [
       { name: "streamlit", color: "green-text-gradient" },
       { name: "openstreetmap", color: "pink-text-gradient" },
     ],
-    image: footballpredictor, // 
+    image: liveability, // 
     source_code_link: "https://github.com/MaanasRao/Liveability",
   },
   {
@@ -286,7 +289,7 @@ const projects = [
       { name: "tailwind", color: "pink-text-gradient" },
       { name: "leaflet", color: "green-text-gradient" },
     ],
-    image: footballpredictor, //
+    image: lifelink, //
     source_code_link: "https://github.com/Saahil-Gupta/MEC--2025",
     live_demo_link: "https://life-link-live.vercel.app/",
   },
