@@ -254,20 +254,6 @@ const projects = [
     image: footballpredictor, 
     source_code_link: "https://github.com/Saahil-Gupta/Football-Predictor-V1",
   },
-
-  {
-  name: "Mac-Find",
-    description:
-      "A dedicated lost-and-found web application for campus students to post and claim lost items. Features a modern UI and real-time updates.",
-    tags: [
-      { name: "nextjs", color: "blue-text-gradient" },
-      { name: "react", color: "green-text-gradient" },
-      { name: "tailwind", color: "pink-text-gradient" },
-    ],
-    image: macfind, // 
-    source_code_link: "https://github.com/MaanasRao/MacFind", 
-    live_demo_link: "https://mac-find-psi.vercel.app/",
-  },
   {
     name: "Liveability",
     description:
