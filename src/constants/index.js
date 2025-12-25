@@ -274,7 +274,7 @@ const projects = [
       "An urban analysis tool that evaluates street-level quality of life metrics using open data. Visualizes safety, convenience, and environment scores.",
     tags: [
       { name: "python", color: "blue-text-gradient" },
-      { name: "streamlit", color: "green-text-gradient" },
+      { name: "reactjs", color: "green-text-gradient" },
       { name: "openstreetmap", color: "pink-text-gradient" },
     ],
     image: liveability, // 
