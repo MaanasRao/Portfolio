@@ -190,48 +190,16 @@ const experiences = [
 
 const projects = [
   {
-    name: "Health Risk Predictor",
+    name: "Liveability",
     description:
-      "A machine learning-based web app that predicts potential health risks using user-provided data. Built using HTML, CSS, JavaScript and Flask.",
+      "An urban analysis tool that evaluates street-level quality of life metrics using open data. Visualizes safety, convenience, and environment scores.",
     tags: [
-      {
-        name: "flask",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "pink-text-gradient",
-      },
+      { name: "python", color: "blue-text-gradient" },
+      { name: "reactjs", color: "green-text-gradient" },
+      { name: "openstreetmap", color: "pink-text-gradient" },
     ],
-    image: healthrisk, 
-    source_code_link: "https://github.com/MaanasRao/Health-Risk-Predictor",
-    live_demo_link: "https://health-risk-predictor.onrender.com",
-  },
-  {
-    name: "Stock Analyzer",
-    description:
-      "A Streamlit-powered tool that allows users to visualize stock performance, predict returns, analyze risk metrics, and extract sentiment from financial news.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "streamlit",
-        color: "green-text-gradient",
-      },
-      {
-        name: "yfinance",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: stockanalyzer, 
-    source_code_link: "https://github.com/MaanasRao/stock-analyzer",
-    live_demo_link: "https://stock-analyzer-49dn.onrender.com",
+    image: liveability, // 
+    source_code_link: "https://github.com/MaanasRao/Liveability",
   },
   {
     name: "Football Predictor",
@@ -254,18 +222,53 @@ const projects = [
     image: footballpredictor, 
     source_code_link: "https://github.com/Saahil-Gupta/Football-Predictor-V1",
   },
+
   {
-    name: "Liveability",
+    name: "Health Risk Predictor",
     description:
-      "An urban analysis tool that evaluates street-level quality of life metrics using open data. Visualizes safety, convenience, and environment scores.",
+      "A machine learning-based web app that predicts potential health risks using user-provided data. Built using HTML, CSS, JavaScript and Flask.",
     tags: [
-      { name: "python", color: "blue-text-gradient" },
-      { name: "reactjs", color: "green-text-gradient" },
-      { name: "openstreetmap", color: "pink-text-gradient" },
+      {
+        name: "flask",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "pink-text-gradient",
+      },
     ],
-    image: liveability, // 
-    source_code_link: "https://github.com/MaanasRao/Liveability",
+    image: healthrisk, 
+    source_code_link: "https://github.com/MaanasRao/Health-Risk-Predictor",
+    live_demo_link: "https://health-risk-predictor.onrender.com",
   },
+  
+  {
+    name: "Stock Analyzer",
+    description:
+      "A Streamlit-powered tool that allows users to visualize stock performance, predict returns, analyze risk metrics, and extract sentiment from financial news.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "streamlit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "yfinance",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: stockanalyzer, 
+    source_code_link: "https://github.com/MaanasRao/stock-analyzer",
+    live_demo_link: "https://stock-analyzer-49dn.onrender.com",
+  },
+  
   {
     name: "Life-Link Live",
     description:
