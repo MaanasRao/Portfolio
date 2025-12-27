@@ -190,7 +190,7 @@ const experiences = [
 
 const projects = [
   {
-    name: "Liveability",
+    name: "Livability",
     description:
       "An urban analysis tool that evaluates street-level quality of life metrics using open data. Visualizes safety, convenience, and environment scores.",
     tags: [
@@ -198,7 +198,8 @@ const projects = [
       { name: "reactjs", color: "green-text-gradient" },
       { name: "openstreetmap", color: "pink-text-gradient" },
     ],
-    image: liveability, // 
+    image: liveability, 
+    source_code_link:"https://appetize.io/app/b_bmyqd62tmix7vxvsj5wsxrawxu",
     source_code_link: "https://github.com/MaanasRao/Liveability",
   },
   {
