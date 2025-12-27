@@ -199,7 +199,7 @@ const projects = [
       { name: "openstreetmap", color: "pink-text-gradient" },
     ],
     image: liveability, 
-    source_code_link:"https://appetize.io/app/b_bmyqd62tmix7vxvsj5wsxrawxu",
+    live_demo_link:"https://appetize.io/app/b_im3o2k77ututmdwx642ai57cmm",
     source_code_link: "https://github.com/MaanasRao/Liveability",
   },
   {
