@@ -201,7 +201,7 @@ const projects = [
       { name: "deepface", color: "pink-text-gradient" },
     ],
     image: neurovault, 
-    source_code_link: "https://github.com/YourUsername/NeuroVault", 
+    source_code_link: "https://github.com/SoorajKM1/NeuroVault", 
     live_demo_link: "", 
   },
   {
@@ -213,8 +213,8 @@ const projects = [
       { name: "python", color: "blue-text-gradient" },
       { name: "gumloop", color: "pink-text-gradient" },
     ],
-    image: sentitrade, // Make sure to import this!
-    source_code_link: "https://github.com/YourUsername/SentiTrade", // Update this
+    image: sentitrade, 
+    source_code_link: "https://github.com/glauuucoma/mchacks2026", 
   },
   {
     name: "Livability",
