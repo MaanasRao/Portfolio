@@ -84,7 +84,7 @@ const Hero = () => {
           </p>
 
           {/* Resume Button */}
-          <a href="/maanas_resume.pdf" download>
+          <a href="/Maanas_Resume.pdf" download>
             <button className="mt-4 px-8 py-4 text-lg bg-[#915EFF] text-white font-semibold rounded-xl hover:bg-purple-700 transition">
               Download Resume
             </button>

@@ -19,6 +19,8 @@ import {
   macfind,
   liveability,
   lifelink,
+  neurovault,
+  sentitrade,
   threejs,
   developer,
   dataanalytics,
@@ -190,6 +192,31 @@ const experiences = [
 
 const projects = [
   {
+    name: "NeuroVault",
+    description:
+      "A caregiver-assisted memory system with voice interaction. Acts as a 'second brain' for patients, using semantic search to answer the questions aloud.",
+    tags: [
+      { name: "DeltaHacks 2026", color: "green-text-gradient" },
+      { name: "fastapi", color: "blue-text-gradient" },
+      { name: "deepface", color: "pink-text-gradient" },
+    ],
+    image: neurovault, 
+    source_code_link: "https://github.com/YourUsername/NeuroVault", 
+    live_demo_link: "", 
+  },
+  {
+    name: "SentiTrade",
+    description:
+      "An AI-powered trading assistant that analyzes market sentiment and various factors to generate concrete 'Buy' or 'Sell' signals for users.",
+    tags: [
+      { name: "McHacks 2026", color: "green-text-gradient" },
+      { name: "python", color: "blue-text-gradient" },
+      { name: "gumloop", color: "pink-text-gradient" },
+    ],
+    image: sentitrade, // Make sure to import this!
+    source_code_link: "https://github.com/YourUsername/SentiTrade", // Update this
+  },
+  {
     name: "Livability",
     description:
       "An urban analysis tool that evaluates street-level quality of life metrics using open data. Visualizes safety, convenience, and environment scores.",
@@ -198,78 +225,10 @@ const projects = [
       { name: "reactjs", color: "green-text-gradient" },
       { name: "openstreetmap", color: "pink-text-gradient" },
     ],
-    image: liveability, 
-    live_demo_link:"https://appetize.io/app/b_im3o2k77ututmdwx642ai57cmm",
+    image: liveability,
+    live_demo_link: "https://appetize.io/app/b_im3o2k77ututmdwx642ai57cmm",
     source_code_link: "https://github.com/MaanasRao/Liveability",
   },
-  {
-    name: "Football Predictor",
-    description:
-      "A football match outcome prediction system leveraging machine learning models to forecast match results based on recent form, stats, and team data.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "scikit-learn",
-        color: "green-text-gradient",
-      },
-      {
-        name: "pandas",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: footballpredictor, 
-    source_code_link: "https://github.com/Saahil-Gupta/Football-Predictor-V1",
-  },
-
-  {
-    name: "Health Risk Predictor",
-    description:
-      "A machine learning-based web app that predicts potential health risks using user-provided data. Built using HTML, CSS, JavaScript and Flask.",
-    tags: [
-      {
-        name: "flask",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: healthrisk, 
-    source_code_link: "https://github.com/MaanasRao/Health-Risk-Predictor",
-    live_demo_link: "https://health-risk-predictor.onrender.com",
-  },
-  
-  {
-    name: "Stock Analyzer",
-    description:
-      "A Streamlit-powered tool that allows users to visualize stock performance, predict returns, analyze risk metrics, and extract sentiment from financial news.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "streamlit",
-        color: "green-text-gradient",
-      },
-      {
-        name: "yfinance",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: stockanalyzer, 
-    source_code_link: "https://github.com/MaanasRao/stock-analyzer",
-    live_demo_link: "https://stock-analyzer-49dn.onrender.com",
-  },
-  
   {
     name: "Life-Link Live",
     description:
@@ -279,11 +238,48 @@ const projects = [
       { name: "tailwind", color: "pink-text-gradient" },
       { name: "leaflet", color: "green-text-gradient" },
     ],
-    image: lifelink, //
+    image: lifelink,
     source_code_link: "https://github.com/Saahil-Gupta/MEC--2025",
     live_demo_link: "https://life-link-live.vercel.app/",
   },
+  {
+    name: "Stock Analyzer",
+    description:
+      "A quantitative dashboard allowing users to visualize stock performance, calculate returns, and analyze risk metrics using mathematical modeling.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "streamlit", color: "green-text-gradient" },
+      { name: "yfinance", color: "pink-text-gradient" },
+    ],
+    image: stockanalyzer,
+    source_code_link: "https://github.com/MaanasRao/stock-analyzer",
+    live_demo_link: "https://stock-analyzer-49dn.onrender.com",
+  },
+  {
+    name: "Football Predictor",
+    description:
+      "A match outcome prediction system leveraging machine learning models to forecast results based on recent form, stats, and team data.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "scikit-learn", color: "green-text-gradient" },
+      { name: "pandas", color: "pink-text-gradient" },
+    ],
+    image: footballpredictor,
+    source_code_link: "https://github.com/Saahil-Gupta/Football-Predictor-V1",
+  },
+  {
+    name: "Health Risk Predictor",
+    description:
+      "A machine learning-based web app that predicts potential health risks using user-provided data. Built using HTML, CSS, JavaScript and Flask.",
+    tags: [
+      { name: "flask", color: "blue-text-gradient" },
+      { name: "html", color: "green-text-gradient" },
+      { name: "javascript", color: "pink-text-gradient" },
+    ],
+    image: healthrisk,
+    source_code_link: "https://github.com/MaanasRao/Health-Risk-Predictor",
+    live_demo_link: "https://health-risk-predictor.onrender.com",
+  },
 ];
-
 
 export { services, technologies, experiences, projects };

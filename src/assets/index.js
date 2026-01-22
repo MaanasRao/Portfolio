@@ -33,6 +33,9 @@ import footballpredictor from "./footballpredictor.png";
 import macfind from "./macfind.jpg";
 import liveability from "./liveability.jpg";
 import lifelink from "./lifelink.jpg";
+import neurovault from "./neurovault.png";
+import sentitrade from "./sentitrade.png";
+
 
 export {
   logo,
@@ -65,6 +68,8 @@ export {
   footballpredictor,
   macfind,
   liveability,
-  lifelink
+  lifelink,
+  neurovault,
+  sentitrade
 
 };
